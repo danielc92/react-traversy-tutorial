@@ -5,9 +5,21 @@ class App extends Component {
   
   state = {
     todos : [
-      {'id':0, 'title':'Labore dolor eiusmod cillum quis.', 'content':'Irure pariatur minim tempor laborum magna non duis ex ea Lorem cupidatat irure velit. Est in ipsum excepteur laborum ut exercitation fugiat aliqua elit non dolor fugiat. Dolor eu laboris ex ullamco veniam nulla excepteur sit enim ad dolore consectetur tempor. Id et proident nisi amet laboris voluptate. Fugiat occaecat sunt cillum occaecat ut labore nulla aute excepteur incididunt qui labore mollit. Sit elit tempor ea eiusmod est reprehenderit et occaecat ex aliquip.'},
-      {'id':1, 'title':'Sint tempor non eu sint aliquip nulla cupidatat duis sit voluptate cillum.', 'content': 'Ad sit laborum aute laborum occaecat incididunt voluptate eu labore sunt adipisicing sit est. Sunt labore elit reprehenderit cupidatat non in elit non. Ut ullamco occaecat pariatur cupidatat cillum sit nisi labore ex id deserunt.'},
-      {'id':2,'title':'Est nisi minim ad sit ipsum aliquip.', 'content':'Eiusmod ex duis id veniam officia laborum pariatur et et dolor. Irure fugiat minim minim culpa cillum. Esse tempor consequat sunt excepteur officia consectetur sint excepteur.'}
+      {
+        'id':0,
+        'complete':true,
+        'title':'Labore dolor eiusmod cillum quis.', 
+        'content':'Irure pariatur minim tempor laborum magna non duis ex ea Lorem cupidatat irure velit. Est in ipsum excepteur laborum ut exercitation fugiat aliqua elit non dolor fugiat. Dolor eu laboris ex ullamco veniam nulla excepteur sit enim ad dolore consectetur tempor. Id et proident nisi amet laboris voluptate. Fugiat occaecat sunt cillum occaecat ut labore nulla aute excepteur incididunt qui labore mollit. Sit elit tempor ea eiusmod est reprehenderit et occaecat ex aliquip.'},
+      {
+        'id':1, 
+        'complete':false,
+        'title':'Sint tempor non eu sint aliquip nulla cupidatat duis sit voluptate cillum.', 
+        'content': 'Ad sit laborum aute laborum occaecat incididunt voluptate eu labore sunt adipisicing sit est. Sunt labore elit reprehenderit cupidatat non in elit non. Ut ullamco occaecat pariatur cupidatat cillum sit nisi labore ex id deserunt.'},
+      {
+        'id':2,
+        'complete':true,
+        'title':'Est nisi minim ad sit ipsum aliquip.', 
+        'content':'Eiusmod ex duis id veniam officia laborum pariatur et et dolor. Irure fugiat minim minim culpa cillum. Esse tempor consequat sunt excepteur officia consectetur sint excepteur.'}
     ]
   }
   
