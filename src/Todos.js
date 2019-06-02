@@ -5,11 +5,10 @@ import PropTypes from 'prop-types';
 class Todos extends Component {
 
     render (){
-        return this.props.todos.map((item, index) => 
-            <TodoItem todo={item}/>
+        return this.props.todos.map((todo) => 
+            <TodoItem todo={todo} key={todo.id} buttonFunction={this.props.buttonFunction}/>
         );
     }
-
 }
 
 // Proptypes

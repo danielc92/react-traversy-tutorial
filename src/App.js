@@ -22,18 +22,26 @@ class App extends Component {
         'content':'Eiusmod ex duis id veniam officia laborum pariatur et et dolor. Irure fugiat minim minim culpa cillum. Esse tempor consequat sunt excepteur officia consectetur sint excepteur.'}
     ]
   }
-  
+
+  buttonFunction = (id) => {
+    console.log('Ive made it up here');
+    this.setState({ todos: this.state.todos.map(todo => {
+        if (todo.id === id) {
+          todo.complete = !todo.complete;
+        }
+        return todo;
+    }) });
+  } 
+  0000
   render () {
-    console.log(this.state.todos);
     return (
       <div className="section">
       <div className="container">
       <div className="content">
-        <h1>Introduction</h1>
-        <p>Proident qui pariatur velit magna proident nisi quis eiusmod. Tempor labore occaecat occaecat deserunt laboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute esse reprehenderit nisi. Esse aliquip esse occaecat et.</p>
-
-        <h1>Todos</h1>
-        <Todos todos={this.state.todos}/>
+        <h1>Main App Component</h1>
+        <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
+        <h1>Rendering Todo Components</h1>
+        <Todos todos={this.state.todos} buttonFunction={this.buttonFunction}/>
       </div>
     </div>
     </div>
