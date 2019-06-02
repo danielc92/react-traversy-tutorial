@@ -2,6 +2,16 @@ import React, {Component} from 'react';
 import Todos from './Todos';
 import Header from './Header';
 
+/*
+  This is the main App Component
+  Todo and Header Component are brought into this Component
+  State is hard coded in for now
+  Button arrow function is created in App Component so that it can be passed down to children Components
+  In order to pass an argument to a function 'up the tree' you can call bind on the function that is passed 
+  down to the child component or 'down the tree'. For example passing the ID for the object up the tree for the buttonFunction() to use
+  setState method is called in order to modify the state of a Component, Component states should never be mutated directly!
+*/
+
 class App extends Component {
   
   state = {
@@ -34,7 +44,6 @@ class App extends Component {
   }
 
   buttonFunction = (id) => {
-    console.log('Ive made it up here');
     this.setState({ todos: this.state.todos.map(todo => {
         if (todo.id === id) {
           todo.complete = !todo.complete;
@@ -45,18 +54,17 @@ class App extends Component {
 
   render () {
     return (
-      <div className="section">
+    <div className="section">
       <div className="container">
+        <Header />
 
-      <Header />
-
-      <div className="content">
-        <h1>Main App Component</h1>
-        <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
-        <h1>Rendering Todo Components</h1>
-        <Todos todos={this.state.todos} buttonFunction={this.buttonFunction}/>
+        <div className="content">
+          <h1>Main App Component</h1>
+          <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
+          <h1>Rendering Todo Components</h1>
+          <Todos todos={this.state.todos} buttonFunction={this.buttonFunction}/>
+        </div>
       </div>
-    </div>
     </div>
     )
   }
