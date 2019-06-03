@@ -12,7 +12,7 @@ class Todos extends Component {
 
     render (){
         return this.props.todos.map((todo) => 
-            <TodoItem todo={todo} key={todo.id} changeTodoStatus={this.props.changeTodoStatus}/>
+            <TodoItem todo={todo} deleteTodo={this.props.deleteTodo} key={todo.id} changeTodoStatus={this.props.changeTodoStatus}/>
         );
     }
 }
