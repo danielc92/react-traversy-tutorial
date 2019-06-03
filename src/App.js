@@ -43,7 +43,7 @@ class App extends Component {
     ]
   }
 
-  buttonFunction = (id) => {
+  changeTodoStatus = (id) => {
     this.setState({ todos: this.state.todos.map(todo => {
         if (todo.id === id) {
           todo.complete = !todo.complete;
@@ -62,7 +62,7 @@ class App extends Component {
           <h1>Main App Component</h1>
           <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
           <h1>Rendering Todo Components</h1>
-          <Todos todos={this.state.todos} buttonFunction={this.buttonFunction}/>
+          <Todos todos={this.state.todos} changeTodoStatus={this.changeTodoStatus}/>
         </div>
       </div>
     </div>
