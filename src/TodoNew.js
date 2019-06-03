@@ -14,7 +14,9 @@ class TodoNew extends Component {
         e.preventDefault();
         this.props.todoData(this.state);
         this.setState({content:'', title: ''})
-    }
+        document.getElementById('title_').value = '';
+        document.getElementById('content_').value = '';
+        alert('You have successfully added a new Todo');    }
     
 
     // Using e.target.name makes the key dynamic.
@@ -29,10 +31,10 @@ class TodoNew extends Component {
             <form onSubmit={this.submit} className="form">
                 <div className="field">
                     <label className="label">Title</label>
-                    <input required onChange={this.change} name="title" className="input"></input>
+                    <input id="title_" required onChange={this.change} name="title" className="input"></input>
                         
                     <label className="label">Content</label>
-                    <input required onChange={this.change} name="content" className="input"></input>
+                    <input id="content_" required onChange={this.change} name="content" className="input"></input>
                 </div>
                 <button className="button is-primary" type="submit">Submit</button>
             </form>
