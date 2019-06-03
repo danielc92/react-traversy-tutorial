@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Todos from './Todos';
 import Header from './Header';
 import TodoNew from './TodoNew';
-
+import uuid from 'uuid';
 
 /*
   This is the main App Component
@@ -63,6 +63,22 @@ class App extends Component {
   }
 
 
+  todoData = (data) => {
+
+    console.log(data['title']);
+
+    let newTodo = {
+      'id': uuid.v4(),
+      'complete':false,
+      'title':data['title'],
+      'content':data['content'] }
+
+    this.setState({ todos: [...this.state.todos, newTodo]});
+
+    console.log(this.state.todos);
+  }
+
+
   render () {
     return (
     <div className="section">
@@ -71,7 +87,7 @@ class App extends Component {
 
         <div className="content">
         <Header />
-        <TodoNew />
+        <TodoNew todoData={this.todoData}/>
           <h3>Main App Component</h3>
           <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
           <h3>Rendering Todo Components</h3>
