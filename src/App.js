@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Todos from './Todos';
 import Header from './Header';
+import TodoNew from './TodoNew';
+
 
 /*
   This is the main App Component
@@ -69,6 +71,7 @@ class App extends Component {
 
         <div className="content">
         <Header />
+        <TodoNew />
           <h3>Main App Component</h3>
           <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
           <h3>Rendering Todo Components</h3>
