@@ -8,7 +8,7 @@ This repo will go through travery media's React tutorial updated for 2019. This 
 - Altering the state from 'down the tree' (without the Context API)
 - Handling form events 
 - Using React Fragments
-
+- Updating state with `setState` (deleting, inserting and updating *todos*)
 ### Available Scripts
 
 In the project directory, you can run:

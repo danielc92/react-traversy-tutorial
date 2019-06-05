@@ -3,6 +3,9 @@ import Todos from './Todos';
 import Header from './Header';
 import TodoNew from './TodoNew';
 import uuid from 'uuid';
+import { BrowserRouter} from 'react-router-dom';
+import About from './About';
+
 
 /*
   This is the main App Component
