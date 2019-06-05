@@ -6,6 +6,8 @@ This repo will go through travery media's React tutorial updated for 2019. This 
 - Passing functions between React Components
 - Conditionally setting className and style with functions
 - Altering the state from 'down the tree' (without the Context API)
+- Handling form events 
+- Using React Fragments
 
 ### Available Scripts
 
