@@ -1,14 +1,16 @@
 # React JS Crash Course - 2019
-This repo will go through travery media's React tutorial updated for 2019. This tutorial uses mainly classed based React components. It includes themes such as;
-- Creating new class based React Components
+This repo will go through travery media's React tutorial updated for 2019. This tutorial uses mainly classed based `React.Component`s. It includes themes such as;
+- Creating new class based `React.Component`s
 - Rendering React Components
-- Passing props between React Components
-- Passing functions between React Components
+- Passing props between `React.Component`s
+- Passing functions between `React.Component`s
 - Conditionally setting className and style with functions
 - Altering the state from 'down the tree' (without the Context API)
 - Handling form events 
-- Using React Fragments
+- Using `React.Fragment`s
 - Updating state with `setState` (deleting, inserting and updating *todos*)
+- `Route` and `BrowserRouter` from `react-router-dom`
+
 ### Available Scripts
 
 In the project directory, you can run:
