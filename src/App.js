@@ -3,7 +3,7 @@ import Todos from './Todos';
 import Header from './Header';
 import TodoNew from './TodoNew';
 import uuid from 'uuid';
-import { BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import About from './About';
 
 
@@ -84,20 +84,29 @@ class App extends Component {
 
   render () {
     return (
+<Router>
     <div className="section">
       <div className="container">
-        
-
         <div className="content">
         <Header />
+
+
+        <Route exact path="/" render={props => (
+        <React.Fragment>
         <TodoNew todoData={this.todoData}/>
-          <h3>Main App Component</h3>
-          <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
-          <h3>Rendering Todo Components</h3>
-          <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} changeTodoStatus={this.changeTodoStatus}/>
+        <h3>Main App Component</h3>
+        <p>Proident qui parismod. Tempor labore ocaboris consectetur cillum eu duis ad laborum dolore. Et elit dolor sit reprehenderit pariatur ut anim voluptate. Tempor pariatur ea consequat culpa voluptate veniam elit non quis id duis veniam eu est. Esse dolore sit et dolore sunt quis sint officia ullamco mollit sunt do velit mollit. Nulla mollit in reprehenderit anim culpa id ipsum commodo ea est adipisicing. Qui Lorem deserunt ullamco proident consequat adipisicing duis ullamco sit reprehenderit irure. Exercitation nulla ex et culpa sunt Lorem labore sunt officia reprehenderit pariatur. Amet dolor reprehenderit ullamco officia aute eecat et.</p>
+        <h3>Rendering Todo Components</h3>
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} changeTodoStatus={this.changeTodoStatus}/>
+        </React.Fragment>  
+        )}/>
+
+        <Route exact path="/about" component={About}/>
+
         </div>
       </div>
     </div>
+</Router>
     )
   }
 
