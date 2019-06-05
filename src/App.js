@@ -3,7 +3,7 @@ import Todos from './Todos';
 import Header from './Header';
 import TodoNew from './TodoNew';
 import uuid from 'uuid';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 import About from './About';
 
 
