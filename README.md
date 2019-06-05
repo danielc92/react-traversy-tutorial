@@ -38,5 +38,32 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+# Deploy Process (Github Pages)
+**Install gh-pages**
+```sh
+npm install gh-pages --save-dev
+```
+**Edit `package.json`**
+```
+# Add the homepage
+"homepage": "https://danielc92.github.io/react-tutorial-traversy"
+# Add predeploy and deploy to scripts
+"scripts": {
+"start": "react-scripts start",
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build",
+...
+```
+**Make sure router is correct
+Change any `BrowserRouter` to `HashRouter` in main `App.js`
+
+**Deploy**
+```sh
+# This will build and deploy to a new branch called gh-pages
+# Modify the hosting source in settings from master branch to gh-pages
+npm run deploy
+```
+
 # Sources
 - [React JS Crash Course - 2019](https://www.youtube.com/watch?v=sBws8MSXN7A)
+- [Deploy React to gh-pages Guide](https://www.youtube.com/watch?v=4NapRkCazks)
